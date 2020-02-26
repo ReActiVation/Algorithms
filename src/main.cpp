@@ -1,6 +1,7 @@
 #include <iostream>
 
 #include <lib/stack.h>
+#include <lib/list.h>
 
 using namespace std;
 
@@ -28,5 +29,16 @@ int main(int argc, char const *argv[])
         cout<<"Stack is not empty"<<endl;
     }
 
+    List<int> lst;
+
+    lst.AddTail(1);
+    lst.AddTail(3);
+    lst.AddTail(4);
+    lst.AddTail(5);
+    lst.AddTail(2);
+    lst.AddTail(8);
+
+    lst.PrintList();
+    
     return 0;
 }

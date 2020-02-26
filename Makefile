@@ -10,7 +10,7 @@ LIBDIR = ./lib
 SOURCES = $(wildcard $(SRCDIR)/*.cpp)
 OBJECTS = $(patsubst ./src%,./obj%, $(patsubst %.cpp, %.o, $(SOURCES)))
 
-TARGET = $(BINDIR)/alg.out
+TARGET = $(BINDIR)/project.out
 
 .PHONY: all
 all: $(TARGET)

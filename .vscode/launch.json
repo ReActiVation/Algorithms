@@ -8,7 +8,7 @@
             "name": "(gdb) Launch",
             "type": "cppdbg",
             "request": "launch",
-            "program": "${workspaceFolder}/bin/alg.out",
+            "program": "${workspaceFolder}/bin/project.out",
             "args": [],
             "stopAtEntry": false,
             "cwd": "${workspaceFolder}",
@@ -28,7 +28,7 @@
             "name": "(gdb) Attach",
             "type": "cppdbg",
             "request": "attach",
-            "program": "${workspaceFolder}/bin/alg.out",
+            "program": "${workspaceFolder}/bin/project.out",
             "processId": "${command:pickProcess}",
             "MIMode": "gdb",
             "setupCommands": [

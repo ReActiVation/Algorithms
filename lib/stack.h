@@ -1,11 +1,11 @@
+#ifndef H_STACK
+#define H_STACK
 #include <cstdlib>
 #include <iostream>
 
-#ifndef H_STACK
-#define H_STACK
-
 template<typename T>
-class Stack{
+class Stack
+{
     private:
         T * array;
         int top;
@@ -24,21 +24,25 @@ class Stack{
 };
 
 template<typename T>
-Stack<T>::Stack(int size){
+Stack<T>::Stack(int size)
+{
     array = new T[size];
     capacity = size;
     top = -1;
 }
 
 template<typename T>
-Stack<T>::~Stack(){
+Stack<T>::~Stack()
+{
     delete [] array;
     array = 0;
 }
 
 template<typename T>
-void Stack<T>::push(T element){
-    if(isFull()){
+void Stack<T>::push(T element)
+{
+    if(isFull())
+    {
         std::cout<<"UnderFlow\nProgram Terminated\n";
         exit(EXIT_FAILURE);
     }
@@ -47,8 +51,10 @@ void Stack<T>::push(T element){
 }
 
 template<typename T>
-T Stack<T>::pop(){
-    if(isEmpty()){
+T Stack<T>::pop()
+{
+    if(isEmpty())
+    {
         std::cout<<"UnderFlow\nProgram Terminated\n";
         exit(EXIT_FAILURE);       
     }
@@ -59,8 +65,10 @@ T Stack<T>::pop(){
 }
 
 template<typename T>
-T Stack<T>::peek(){
-    if(!isEmpty()){
+T Stack<T>::peek()
+{
+    if(!isEmpty())
+    {
         return array[top];
     }else{
         exit(EXIT_FAILURE);
@@ -68,17 +76,20 @@ T Stack<T>::peek(){
 }
 
 template<typename T>
-int Stack<T>::size(){
+int Stack<T>::size()
+{
     return top + 1;
 }
 
 template<typename T>
-bool Stack<T>::isEmpty(){
+bool Stack<T>::isEmpty()
+{
     return top == -1;
 }
 
 template<typename T>
-bool Stack<T>::isFull(){
+bool Stack<T>::isFull()
+{
     return top == capacity - 1;
 }
 
