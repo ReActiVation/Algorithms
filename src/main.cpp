@@ -2,6 +2,7 @@
 
 #include <lib/stack.h>
 #include <lib/list.h>
+#include <lib/binary_tree.h>
 
 using namespace std;
 
@@ -39,6 +40,20 @@ int main(int argc, char const *argv[])
     lst.AddTail(8);
 
     lst.PrintList();
+
+    BinaryTree<int> *binTree = new BinaryTree<int>();
+
+    binTree->insert_node(10);
+    binTree->insert_node(6);
+    binTree->insert_node(14);
+    binTree->insert_node(5);
+    binTree->insert_node(8);
+    binTree->insert_node(11);
+    binTree->insert_node(18);
+    
+    binTree->pre_order_print();
+    binTree->in_order_print();
+    binTree->post_order_print();
     
     return 0;
 }
